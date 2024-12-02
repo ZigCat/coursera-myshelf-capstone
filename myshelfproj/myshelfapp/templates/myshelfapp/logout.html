@@ -1,0 +1,9 @@
+<!-- templates/myapp/logout.html -->
+{% extends 'myapp/base.html' %}
+
+{% block title %}Logout - Book Store{% endblock %}
+
+{% block content %}
+    <h1>Logged out successfully</h1>
+    <p>You have been logged out. <a href="{% url 'login' %}">Log in again</a> if you'd like.</p>
+{% endblock %}

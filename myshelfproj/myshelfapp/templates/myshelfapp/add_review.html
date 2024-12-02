@@ -1,0 +1,15 @@
+<!-- templates/myapp/add_review.html -->
+{% extends 'myapp/base.html' %}
+
+{% block title %}Add Review - Book Store{% endblock %}
+
+{% block content %}
+    <h1>Add a Review for {{ book.title }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+        
+        <button type="submit">Submit Review</button>
+    </form>
+{% endblock %}
